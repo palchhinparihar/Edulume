@@ -22,6 +22,8 @@ import {
   TrendingUp,
 } from "lucide-react";
 import SEO from "../seo/SEO";
+import { LinkedinIcon, XIcon } from "../ui/Icons";
+
 import {
   getCourse,
   toggleCourseBookmark,
@@ -189,12 +191,12 @@ const CourseDetailPage: React.FC = () => {
       setCourse((prev) =>
         prev
           ? {
-              ...prev,
-              is_bookmarked: response.bookmarked,
-              bookmark_count: response.bookmarked
-                ? prev.bookmark_count + 1
-                : prev.bookmark_count - 1,
-            }
+            ...prev,
+            is_bookmarked: response.bookmarked,
+            bookmark_count: response.bookmarked
+              ? prev.bookmark_count + 1
+              : prev.bookmark_count - 1,
+          }
           : null
       );
     } catch (error) {
@@ -221,13 +223,13 @@ const CourseDetailPage: React.FC = () => {
       setCourse((prev) =>
         prev
           ? {
-              ...prev,
-              chapters: prev.chapters?.map((chapter) =>
-                chapter.id === chapterId
-                  ? { ...chapter, content: response.content }
-                  : chapter
-              ),
-            }
+            ...prev,
+            chapters: prev.chapters?.map((chapter) =>
+              chapter.id === chapterId
+                ? { ...chapter, content: response.content }
+                : chapter
+            ),
+          }
           : null
       );
 
@@ -238,8 +240,8 @@ const CourseDetailPage: React.FC = () => {
       console.error("❌ Error generating content:", error);
       alert(
         `Failed to generate chapter content: ${
-          //@ts-ignore
-          error.message || "Please try again."
+        //@ts-ignore
+        error.message || "Please try again."
         }`
       );
     } finally {
@@ -272,8 +274,7 @@ const CourseDetailPage: React.FC = () => {
         setCurrentGeneratingIndex(i);
 
         console.log(
-          `📝 Generating content for chapter ${i + 1}/${
-            chaptersToGenerate.length
+          `📝 Generating content for chapter ${i + 1}/${chaptersToGenerate.length
           }: ${chapter.title}`
         );
 
@@ -284,13 +285,13 @@ const CourseDetailPage: React.FC = () => {
           setCourse((prev) =>
             prev
               ? {
-                  ...prev,
-                  chapters: prev.chapters?.map((ch) =>
-                    ch.id === chapter.id
-                      ? { ...ch, content: response.content }
-                      : ch
-                  ),
-                }
+                ...prev,
+                chapters: prev.chapters?.map((ch) =>
+                  ch.id === chapter.id
+                    ? { ...ch, content: response.content }
+                    : ch
+                ),
+              }
               : null
           );
 
@@ -357,15 +358,15 @@ const CourseDetailPage: React.FC = () => {
           setCourse((prev) =>
             prev
               ? {
-                  ...prev,
-                  is_enrolled: false,
-                  enrollment_data: null,
-                  chapters: prev.chapters?.map((ch) => ({
-                    ...ch,
-                    isCompleted: false,
-                    completedAt: null,
-                  })),
-                }
+                ...prev,
+                is_enrolled: false,
+                enrollment_data: null,
+                chapters: prev.chapters?.map((ch) => ({
+                  ...ch,
+                  isCompleted: false,
+                  completedAt: null,
+                })),
+              }
               : null
           );
         }
@@ -375,18 +376,17 @@ const CourseDetailPage: React.FC = () => {
         setCourse((prev) =>
           prev
             ? {
-                ...prev,
-                is_enrolled: true,
-                enrollment_data: response.enrollment,
-              }
+              ...prev,
+              is_enrolled: true,
+              enrollment_data: response.enrollment,
+            }
             : null
         );
       }
     } catch (error) {
       console.error("Error with enrollment:", error);
       alert(
-        `Failed to ${
-          course.is_enrolled ? "unenroll from" : "enroll in"
+        `Failed to ${course.is_enrolled ? "unenroll from" : "enroll in"
         } course. Please try again.`
       );
     } finally {
@@ -414,10 +414,10 @@ const CourseDetailPage: React.FC = () => {
         const updatedChapters = prev.chapters?.map((ch) =>
           ch.id === chapterId
             ? {
-                ...ch,
-                isCompleted: isCompleted,
-                completedAt: isCompleted ? new Date().toISOString() : null,
-              }
+              ...ch,
+              isCompleted: isCompleted,
+              completedAt: isCompleted ? new Date().toISOString() : null,
+            }
             : ch
         );
 
@@ -426,13 +426,13 @@ const CourseDetailPage: React.FC = () => {
           chapters: updatedChapters,
           enrollment_data: prev.enrollment_data
             ? {
-                ...prev.enrollment_data,
-                progressPercentage: response.progress.progressPercentage,
-                isCompleted: response.progress.isCourseCompleted,
-                completedAt: response.progress.isCourseCompleted
-                  ? new Date().toISOString()
-                  : prev.enrollment_data.completedAt,
-              }
+              ...prev.enrollment_data,
+              progressPercentage: response.progress.progressPercentage,
+              isCompleted: response.progress.isCourseCompleted,
+              completedAt: response.progress.isCourseCompleted
+                ? new Date().toISOString()
+                : prev.enrollment_data.completedAt,
+            }
             : null,
         };
       });
@@ -514,8 +514,8 @@ const CourseDetailPage: React.FC = () => {
       console.error("Error generating test:", error);
       alert(
         `Failed to generate test: ${
-          //@ts-ignore
-          error.response?.data?.error || error.message || "Please try again."
+        //@ts-ignore
+        error.response?.data?.error || error.message || "Please try again."
         }`
       );
     } finally {
@@ -524,15 +524,31 @@ const CourseDetailPage: React.FC = () => {
   };
 
   const handleStartTest = () => {
-    if (!course || !currentTest) return;
+    if (!currentTest || !course) return;
 
-    setShowTestInstructions(false);
-    // Navigate to standalone test page with test data
-    navigate(`/courses/${course.id}/test/${currentTest.id}`, {
-      state: { testData: currentTest },
-    });
-    // Also save to localStorage as fallback
-    localStorage.setItem(`test_${currentTest.id}`, JSON.stringify(currentTest));
+    const element = document.documentElement;
+
+    if (element.requestFullscreen) {
+      element.requestFullscreen()
+        .then(() => {
+          // We only navigate if fullscreen was successfully granted
+          navigate(`/courses/${course.id}/test/${currentTest.id}`, {
+            state: {
+              testData: currentTest,
+              fullscreenEnabled: true
+            }
+          });
+        })
+        .catch((err) => {
+          console.error("Fullscreen error:", err);
+          alert("Integrity Check: You must allow fullscreen mode to start this certification test.");
+        });
+    } else {
+      // Navigate to standalone test page with test data
+      navigate(`/courses/${course.id}/test/${currentTest.id}`, {
+        state: { testData: currentTest }
+      });
+    }
   };
 
   const handleTestComplete = (result: any) => {
@@ -550,6 +566,7 @@ const CourseDetailPage: React.FC = () => {
     // Navigate directly to the standalone test results page
     navigate(`/courses/${course.id}/test/${testId}/results`);
   };
+
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("en-US", {
@@ -621,7 +638,7 @@ const CourseDetailPage: React.FC = () => {
       <div className="min-h-screen bg-royal-black text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
           {/* Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8">
             <div className="flex items-center">
               <button
                 onClick={() => navigate("/courses")}
@@ -633,13 +650,44 @@ const CourseDetailPage: React.FC = () => {
                 <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2 break-words">
                   {course.title}
                 </h1>
-                <div className="flex items-center space-x-2 sm:space-x-4 text-gray-400 text-xs sm:text-sm">
+
+                <div className="flex items-center space-x-2 sm:space-x-4 text-gray-400 text-xs sm:text-sm mb-2">
                   <div className="flex items-center space-x-1">
                     <Clock size={14} className="sm:w-4 sm:h-4" />
                     <span className="truncate">
                       {formatDate(course.created_at)}
                     </span>
                   </div>
+                </div>
+                {/* Social Share Buttons */}
+                <div className="flex items-center">
+                  <span className="mr-2 text-gray-400">Share on:</span>
+                  <button
+                    onClick={() => {
+                      const url = encodeURIComponent(window.location.href);
+                      const text = `Check out this course: ${course.title}`;
+                      const xUrl = `https://x.com/intent/tweet?url=${url}&text=${text}`;
+
+                      window.open(xUrl, '_blank', 'width=600,height=400');
+                    }}
+                    className="px-2 rounded-lg hover:bg-smoke-gray transition-colors duration-200 text-gray-400 hover:text-[#1DA1F2]"
+                    title="Share on X (Twitter)"
+                  >
+                    <XIcon />
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      const url = window.location.href;
+                      const text = `Check out this course: ${course.title}`;
+                      const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(text)}`;
+                      window.open(shareUrl, '_blank', 'noopener,noreferrer');
+                    }}
+                    className="px-2 rounded-lg hover:bg-smoke-gray transition-colors duration-200 text-gray-400 hover:text-[#0A66C2]"
+                    title="Share on LinkedIn"
+                  >
+                    <LinkedinIcon />
+                  </button>
                 </div>
               </div>
             </div>
@@ -650,11 +698,10 @@ const CourseDetailPage: React.FC = () => {
                 <button
                   onClick={handleEnrollment}
                   disabled={enrolling}
-                  className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm lg:text-base ${
-                    course.is_enrolled
-                      ? "bg-red-600 hover:bg-red-700 text-white"
-                      : "bg-alien-green text-royal-black hover:bg-alien-green/90 shadow-alien-glow"
-                  } disabled:opacity-50 disabled:cursor-not-allowed`}
+                  className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm lg:text-base ${course.is_enrolled
+                    ? "bg-red-600 hover:bg-red-700 text-white"
+                    : "bg-alien-green text-royal-black hover:bg-alien-green/90 shadow-alien-glow"
+                    } disabled:opacity-50 disabled:cursor-not-allowed`}
                 >
                   {enrolling ? (
                     <>
@@ -690,6 +737,7 @@ const CourseDetailPage: React.FC = () => {
                   )}
                 </button>
               )}
+
             </div>
           </div>
 
@@ -904,16 +952,15 @@ const CourseDetailPage: React.FC = () => {
                               Attempt #{userTests.length - index}
                             </span>
                             <span
-                              className={`text-xs px-2 py-1 rounded font-semibold ${
-                                test.status === "completed" && test.hasPassed
-                                  ? "bg-green-600 text-white"
-                                  : test.status === "completed" &&
-                                    !test.hasPassed
+                              className={`text-xs px-2 py-1 rounded font-semibold ${test.status === "completed" && test.hasPassed
+                                ? "bg-green-600 text-white"
+                                : test.status === "completed" &&
+                                  !test.hasPassed
                                   ? "bg-red-600 text-white"
                                   : test.status === "processing"
-                                  ? "bg-yellow-600 text-black"
-                                  : "bg-gray-600 text-white"
-                              }`}
+                                    ? "bg-yellow-600 text-black"
+                                    : "bg-gray-600 text-white"
+                                }`}
                             >
                               {test.status === "completed" &&
                                 test.hasPassed &&
@@ -927,11 +974,10 @@ const CourseDetailPage: React.FC = () => {
                             {test.status === "completed" &&
                               test.score !== null && (
                                 <span
-                                  className={`font-bold ${
-                                    test.hasPassed
-                                      ? "text-green-400"
-                                      : "text-red-400"
-                                  }`}
+                                  className={`font-bold ${test.hasPassed
+                                    ? "text-green-400"
+                                    : "text-red-400"
+                                    }`}
                                 >
                                   {test.score}%
                                 </span>
@@ -1229,11 +1275,10 @@ const CourseDetailPage: React.FC = () => {
                                       )
                                     }
                                     disabled={updatingProgress === chapter.id}
-                                    className={`px-3 sm:px-4 py-2 rounded-lg font-semibold transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm ${
-                                      chapter.isCompleted
-                                        ? "bg-gray-600 hover:bg-gray-700 text-white"
-                                        : "bg-alien-green text-royal-black hover:bg-alien-green/90 shadow-alien-glow"
-                                    }`}
+                                    className={`px-3 sm:px-4 py-2 rounded-lg font-semibold transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm ${chapter.isCompleted
+                                      ? "bg-gray-600 hover:bg-gray-700 text-white"
+                                      : "bg-alien-green text-royal-black hover:bg-alien-green/90 shadow-alien-glow"
+                                      }`}
                                   >
                                     {updatingProgress === chapter.id ? (
                                       <>
