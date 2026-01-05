@@ -52,26 +52,26 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="bg-smoke-gray/95 border-t border-smoke-light mt-20">
+    <footer className="bg-gray-900 border-t border-smoke-dark mt-20">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div data-aos="fade-up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <img src="/logo.png" alt="Edulume" className="w-8 h-8" />
-              <span className="glow-text text-xl font-alien font-bold">
+              <span className="text-matcha-muted text-xl font-alien font-bold">
                 Edulume
               </span>
             </div>
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+            <p className="text-olive-gold text-sm mb-6 leading-relaxed">
               Your college's ultimate resource hub. Share knowledge, discover
               resources, and connect with fellow students in our secure digital
               vault.
             </p>
             <div className="flex items-center space-x-4">
-              <div className="w-3 h-3 bg-alien-green rounded-full animate-pulse"></div>
-              <span className="text-xs text-alien-green font-cyber">
+              <div className="w-3 h-3 bg-matcha-muted rounded-full animate-pulse"></div>
+              <span className="text-xs text-matcha-muted font-cyber">
                 SYSTEM ONLINE
               </span>
             </div>
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-alien-green font-alien font-bold mb-4 flex items-center">
+            <h3 className="text-matcha-muted font-alien font-bold mb-4 flex items-center">
               <Zap className="mr-2" size={16} />
               Quick Access
             </h3>
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/pdfs"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   <FileText className="mr-2" size={14} />
                   Browse PDFs
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/ebooks"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   <BookOpen className="mr-2" size={14} />
                   E-book Library
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/discussions"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   <MessageSquare className="mr-2" size={14} />
                   Discussions
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/roadmaps"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   <Map className="mr-2" size={14} />
                   Learning Roadmaps
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/upload"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   <Upload className="mr-2" size={14} />
                   Upload Resource
@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
 
           {/* Community */}
           <div>
-            <h3 className="text-alien-green font-alien font-bold mb-4 flex items-center">
+            <h3 className="text-matcha-muted font-alien font-bold mb-4 flex items-center">
               <Users className="mr-2" size={16} />
               Community
             </h3>
@@ -142,7 +142,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/discussions/new"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   Ask Question
                 </Link>
@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/discussions?category=academic"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   Academic Help
                 </Link>
@@ -158,7 +158,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/discussions?category=technical"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   Technical Support
                 </Link>
@@ -166,7 +166,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/discussions?category=career"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   Career Guidance
                 </Link>
@@ -176,7 +176,7 @@ const Footer: React.FC = () => {
 
           {/* Contact & Security */}
           <div>
-            <h3 className="text-alien-green font-alien font-bold mb-4 flex items-center">
+            <h3 className="text-matcha-muted font-alien font-bold mb-4 flex items-center">
               <Shield className="mr-2" size={16} />
               Security & Contact
             </h3>
@@ -184,7 +184,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="mailto:tarinagarwal@gmail.com"
-                  className="flex items-center text-gray-400 hover:text-alien-green transition-colors duration-300 text-sm"
+                  className="flex items-center text-gray-400 hover:text-moss-accent transition-colors duration-300 text-sm"
                 >
                   <Mail className="mr-2" size={14} />
                   Contact Support
@@ -209,7 +209,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-royal-black border-t border-smoke-light">
+      <div className="bg-gray-900 border-t border-smoke-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 text-sm text-gray-400 text-center sm:text-left">
@@ -221,14 +221,14 @@ const Footer: React.FC = () => {
               </span>
             </div>
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
-              <button className="text-gray-400 hover:text-alien-green transition-colors duration-300">
+              <button className="text-gray-400 hover:text-moss-accent transition-colors duration-300">
                 Privacy Policy
               </button>
-              <button className="text-gray-400 hover:text-alien-green transition-colors duration-300">
+              <button className="text-gray-400 hover:text-moss-accent transition-colors duration-300">
                 Terms of Service
               </button>
-              <div className="flex items-center space-x-2 text-alien-green">
-                <div className="w-2 h-2 bg-alien-green rounded-full animate-pulse"></div>
+              <div className="flex items-center space-x-2 text-matcha-muted">
+                <div className="w-2 h-2 bg-matcha-muted rounded-full animate-pulse"></div>
                 <span className="font-cyber text-xs">SECURE CONNECTION</span>
               </div>
             </div>
@@ -237,9 +237,9 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute bottom-20 left-10 w-2 h-2 bg-alien-green rounded-full animate-pulse opacity-30"></div>
-      <div className="absolute bottom-32 right-20 w-1 h-1 bg-alien-green rounded-full animate-pulse opacity-40"></div>
-      <div className="absolute bottom-16 right-32 w-3 h-3 bg-alien-green rounded-full animate-pulse opacity-20"></div>
+      <div className="absolute bottom-20 left-10 w-2 h-2 bg-alien-green-light rounded-full animate-pulse opacity-30"></div>
+      <div className="absolute bottom-32 right-20 w-1 h-1 bg-alien-green-light rounded-full animate-pulse opacity-40"></div>
+      <div className="absolute bottom-16 right-32 w-3 h-3 bg-alien-green-light rounded-full animate-pulse opacity-20"></div>
     </footer>
   );
 };
