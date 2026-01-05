@@ -56,7 +56,7 @@ const LandingPage: React.FC = () => {
               <p className="text-lg sm:text-xl md:text-2xl text-sage-green mb-4 sm:mb-6 font-cyber">
                 Master Tech Skills with AI-Powered Learning
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-olive-gold mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
+              <p className="text-sm sm:text-base md:text-lg paragraph mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
                 Your complete learning platform with AI-powered courses,
                 structured roadmaps, community discussions, free resources, and
                 interview prep-all in one place.
@@ -154,7 +154,7 @@ const LandingPage: React.FC = () => {
                       size={20}
                     />
                   </h3>
-                  <p className="text-sm sm:text-base font-semibold text-olive-gold mb-4">
+                  <p className="text-sm sm:text-base font-semibold paragraph mb-4">
                     Learn with AI-generated courses, interactive chapters, and
                     earn certificates with automated tests.
                   </p>
@@ -188,7 +188,7 @@ const LandingPage: React.FC = () => {
                       size={20}
                     />
                   </h3>
-                  <p className="text-sm sm:text-base font-semibold text-olive-gold mb-4">
+                  <p className="text-sm sm:text-base font-semibold paragraph mb-4">
                     Follow structured learning paths with AI-generated roadmaps,
                     resources, and career guidance.
                   </p>
@@ -222,7 +222,7 @@ const LandingPage: React.FC = () => {
                       size={20}
                     />
                   </h3>
-                  <p className="text-sm sm:text-base font-semibold text-olive-gold mb-4">
+                  <p className="text-sm sm:text-base font-semibold paragraph mb-4">
                     Ask questions, share knowledge, and get help from the
                     community with voting and best answers.
                   </p>
@@ -256,7 +256,7 @@ const LandingPage: React.FC = () => {
                       size={20}
                     />
                   </h3>
-                  <p className="text-sm sm:text-base font-semibold text-olive-gold mb-4">
+                  <p className="text-sm sm:text-base font-semibold paragraph mb-4">
                     Access thousands of free programming PDFs, ebooks, and
                     technical documentation.
                   </p>
@@ -290,7 +290,7 @@ const LandingPage: React.FC = () => {
                       size={20}
                     />
                   </h3>
-                  <p className="text-sm sm:text-base font-semibold text-olive-gold mb-4">
+                  <p className="text-sm sm:text-base font-semibold paragraph mb-4">
                     Prepare for technical interviews with curated questions,
                     tips, and resources.
                   </p>
@@ -324,7 +324,7 @@ const LandingPage: React.FC = () => {
                       size={20}
                     />
                   </h3>
-                  <p className="text-sm sm:text-base font-semibold text-olive-gold mb-4">
+                  <p className="text-sm sm:text-base font-semibold paragraph mb-4">
                     Upload PDFs and chat with AI to get instant answers and
                     summaries from your documents.
                   </p>
@@ -369,7 +369,7 @@ const LandingPage: React.FC = () => {
                 <h3 className="text-lg sm:text-xl font-bold mb-2 text-sage-green">
                   AI-Powered
                 </h3>
-                <p className="text-sm sm:text-base text-olive-gold">
+                <p className="text-sm sm:text-base paragraph">
                   Leverage AI for personalized courses, roadmaps, and instant
                   answers
                 </p>
@@ -382,7 +382,7 @@ const LandingPage: React.FC = () => {
                 <h3 className="text-lg sm:text-xl font-bold mb-2 text-sage-green">
                   100% Free
                 </h3>
-                <p className="text-sm sm:text-base text-olive-gold">
+                <p className="text-sm sm:text-base paragraph">
                   All features, resources, and courses are completely free
                   forever
                 </p>
@@ -395,7 +395,7 @@ const LandingPage: React.FC = () => {
                 <h3 className="text-lg sm:text-xl font-bold mb-2 text-sage-green">
                   Community Driven
                 </h3>
-                <p className="text-sm sm:text-base text-olive-gold">
+                <p className="text-sm sm:text-base paragraph">
                   Learn together, share knowledge, and grow with the community
                 </p>
               </div>
@@ -407,7 +407,7 @@ const LandingPage: React.FC = () => {
                 <h3 className="text-lg sm:text-xl font-bold mb-2 text-sage-green">
                   Comprehensive
                 </h3>
-                <p className="text-sm sm:text-base text-olive-gold">
+                <p className="text-sm sm:text-base paragraph">
                   Everything from basics to advanced topics, all in one place
                 </p>
               </div>
@@ -419,7 +419,7 @@ const LandingPage: React.FC = () => {
                 <h3 className="text-lg sm:text-xl font-bold mb-2 text-sage-green">
                   Certificates
                 </h3>
-                <p className="text-sm sm:text-base text-olive-gold">
+                <p className="text-sm sm:text-base paragraph">
                   Earn certificates upon course completion with automated tests
                 </p>
               </div>
@@ -431,7 +431,7 @@ const LandingPage: React.FC = () => {
                 <h3 className="text-lg sm:text-xl font-bold mb-2 text-sage-green">
                   Always Updated
                 </h3>
-                <p className="text-sm sm:text-base text-olive-gold">
+                <p className="text-sm sm:text-base paragraph">
                   Fresh content added regularly to keep you ahead of the curve
                 </p>
               </div>
@@ -446,7 +446,7 @@ const LandingPage: React.FC = () => {
               <h2 data-aos="fade-in" className="text-2xl sm:text-3xl md:text-4xl font-alien font-bold mb-4 glow-text">
                 Ready to Start Learning?
               </h2>
-              <p data-aos="fade-out" className="text-sm sm:text-base md:text-lg text-olive-gold mb-8 max-w-2xl mx-auto">
+              <p data-aos="fade-out" className="text-sm sm:text-base md:text-lg paragraph mb-8 max-w-2xl mx-auto">
                 Join thousands of learners mastering tech skills with AI-powered
                 courses and community support
               </p>
