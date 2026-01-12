@@ -83,19 +83,19 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-12">
       <div className="max-w-md w-full">
-        <div className="smoke-card p-8 relative smoke-effect">
+        <div className="smoke-card shadow-lg shadow-gray-500 p-8 relative smoke-effect">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-alien-green rounded-full flex items-center justify-center mx-auto mb-4 shadow-alien-glow">
+            <div className="w-16 h-16 bg-olive-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-olive-forest">
               {isLogin ? (
-                <LogIn className="text-royal-black cursor-pointer" size={32} />
+                <LogIn className="text-olive-gold cursor-pointer" size={32} />
               ) : (
-                <UserPlus className="text-royal-black cursor-pointer" size={32} />
+                <UserPlus className="text-olive-gold cursor-pointer" size={32} />
               )}
             </div>
-            <h2 className="text-3xl font-alien font-bold glow-text">
+            <h2 className="text-3xl font-bold glow-text">
               {isLogin ? "Access Vault" : "Join Vault"}
             </h2>
-            <p className="text-gray-400 mt-2">
+            <p className="text-matcha-primary font-semibold mt-2">
               {isLogin ? "Enter your credentials" : "Create your account"}
             </p>
           </div>
@@ -103,12 +103,12 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {isLogin ? (
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-moss-accent mb-2">
                   Username or Email
                 </label>
                 <div className="relative">
                   <User
-                    className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                    className="absolute left-3 top-1/2 transform -translate-y-1/2 text-moss-accent"
                     size={20}
                   />
                   <input
@@ -124,12 +124,12 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
             ) : (
               <>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-moss-accent mb-2">
                     Username
                   </label>
                   <div className="relative">
                     <User
-                      className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                      className="absolute left-3 top-1/2 transform -translate-y-1/2 text-moss-accent"
                       size={20}
                     />
                     <input
@@ -144,12 +144,12 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-moss-accent mb-2">
                     Email
                   </label>
                   <div className="relative">
                     <Mail
-                      className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                      className="absolute left-3 top-1/2 transform -translate-y-1/2 text-moss-accent"
                       size={20}
                     />
                     <input
@@ -175,12 +175,12 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
 
                 {showOTPField && (
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-moss-accent mb-2">
                       Verification Code
                     </label>
                     <div className="relative">
                       <Shield
-                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-moss-accent"
                         size={20}
                       />
                       <input
@@ -197,7 +197,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                       type="button"
                       onClick={handleSendOTP}
                       disabled={otpLoading}
-                      className="mt-2 text-sm text-gray-400 hover:text-alien-green transition-colors duration-300"
+                      className="mt-2 text-sm text-moss-accent hover:text-alien-green transition-colors duration-300"
                     >
                       Resend Code
                     </button>
@@ -207,12 +207,12 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
             )}
 
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-moss-accent mb-2">
                 Password
               </label>
               <div className="relative">
                 <Lock
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-moss-accent"
                   size={20}
                 />
                 <input
@@ -253,7 +253,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                 <div className="w-full border-t border-smoke-light"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-smoke-gray text-gray-400">
+                <span className="px-2 bg-olive-amber rounded-lg text-moss-accent">
                   Or continue with
                 </span>
               </div>
@@ -262,7 +262,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
             <div className="mt-6">
               <a
                 href={`${import.meta.env.VITE_API_URL || "/api"}/auth/google`}
-                className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-smoke-light rounded-lg text-white hover:bg-smoke-light hover:text-black transition-colors"
+                className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-lg  text-black hover:text-olive-gold bg-matcha-muted hover:bg-olive-forest transition-colors"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path
@@ -290,7 +290,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
           <div className="mt-6 text-center">
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="text-alien-green hover:text-alien-green-light cursor-pointer transition-colors duration-300"
+              className="text-matcha-primary hover:text-olive-primary  cursor-pointer hover:underline transition-colors duration-300"
             >
               {isLogin
                 ? "Don't have an account? Sign up"
@@ -303,7 +303,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
               <button
                 type="button"
                 onClick={() => navigate("/forgot-password")}
-                className="text-sm text-gray-400 hover:text-alien-green cursor-pointer transition-colors duration-300"
+                className="text-sm text-moss-accent hover:text-matcha-primary cursor-pointer transition-colors duration-300"
               >
                 Forgot your password?
               </button>
