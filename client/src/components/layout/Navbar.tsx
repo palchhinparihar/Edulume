@@ -305,7 +305,7 @@ export default function ResponsiveNavbar({
               </button>
               {aiToolsOpen && (
                 <div
-                  className="absolute left-0 mt-2 w-48 bg-smoke-light border border-smoke-light rounded-lg shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-48 bg-beige-warm border border-beige-warm  rounded-lg shadow-lg z-50"
                   role="menu"
                 >
                   <Link
@@ -521,7 +521,7 @@ export default function ResponsiveNavbar({
         <div className="h-[calc(100vh-4rem)] overflow-y-auto px-2 pt-4 pb-6 space-y-2">
           {/* Resources (collapsible) */}
           <button
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-gray-900 hover:text-alien-green transition-all duration-300"
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-gray-900 hover:text-matcha-primary transition-all duration-300"
             onClick={() => setMobileResourcesOpen((v) => !v)}
             aria-expanded={mobileResourcesOpen}
           >
@@ -543,8 +543,8 @@ export default function ResponsiveNavbar({
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                   isActive("/pdfs")
-                    ? "text-alien-green shadow-alien-glow bg-alien-green/10"
-                    : "text-gray-900 hover:text-alien-green hover:shadow-alien-glow"
+                    ? "text-matcha-primary shadow-olive-forest bg-olive-forest"
+                    : "text-gray-900 hover:text-matcha-primary hover:shadow-olive-forest"
                 }`}
               >
                 <FileText size={20} />
@@ -555,8 +555,8 @@ export default function ResponsiveNavbar({
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                   isActive("/ebooks")
-                    ? "text-alien-green shadow-alien-glow bg-alien-green/10"
-                    : "text-gray-900 hover:text-alien-green hover:shadow-alien-glow"
+                    ? "text-matcha-primary shadow-olive-forest bg-olive-forest"
+                    : "text-gray-900 hover:text-matcha-primary hover:shadow-olive-forest"
                 }`}
               >
                 <BookOpen size={20} />
@@ -567,8 +567,8 @@ export default function ResponsiveNavbar({
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                   isActive("/interview-resources")
-                    ? "text-alien-green shadow-alien-glow bg-alien-green/10"
-                    : "text-gray-900 hover:text-alien-green hover:shadow-alien-glow"
+                    ? "text-matcha-primary shadow-olive-forest bg-olive-forest"
+                    : "text-gray-900 hover:text-matcha-primary hover:shadow-olive-forest"
                 }`}
               >
                 <Briefcase size={20} />
@@ -581,10 +581,10 @@ export default function ResponsiveNavbar({
           <Link
             to="/discussions"
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`flex items-center space-x-2 px-3 py-2 rounded-lg border border-alien-green transition-all duration-300 ${
+            className={`flex items-center space-x-2 px-3 py-2 rounded-lg border border-olive-forest transition-all duration-300 ${
               isActive("/discussions")
-                ? "text-alien-green shadow-alien-glow bg-alien-green/10"
-                : "text-gray-900 hover:text-alien-green hover:shadow-alien-glow"
+                ? "text-matcha-primary shadow-olive-forest bg-olive-forest"
+                : "text-gray-900 hover:text-matcha-primary hover:shadow-olive-forest"
             }`}
           >
             <MessageSquare size={20} />
@@ -593,7 +593,7 @@ export default function ResponsiveNavbar({
 
           {/* AI Tools (collapsible) */}
           <button
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-gray-900 hover:text-alien-green transition-all duration-300"
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-gray-900 hover:text-matcha-primary transition-all duration-300"
             onClick={() => setMobileAiToolsOpen((v) => !v)}
             aria-expanded={mobileAiToolsOpen}
           >
@@ -615,8 +615,8 @@ export default function ResponsiveNavbar({
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                   isActive("/courses")
-                    ? "text-alien-green shadow-alien-glow bg-alien-green/10"
-                    : "text-gray-900 hover:text-alien-green hover:shadow-alien-glow"
+                    ? "text-matcha-primary shadow-olive-forest bg-olive-forest"
+                    : "text-gray-900 hover:text-matcha-primary hover:shadow-olive-forest"
                 }`}
               >
                 <GraduationCap size={20} />
@@ -627,8 +627,8 @@ export default function ResponsiveNavbar({
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                   isActive("/roadmaps")
-                    ? "text-alien-green shadow-alien-glow bg-alien-green/10"
-                    : "text-gray-900 hover:text-alien-green hover:shadow-alien-glow"
+                    ? "text-matcha-primary shadow-olive-forest bg-olive-forest"
+                    : "text-gray-900 hover:text-matcha-primary hover:shadow-olive-forest"
                 }`}
               >
                 <Map size={20} />
@@ -639,8 +639,8 @@ export default function ResponsiveNavbar({
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                   isActive("/pdf-chatbot")
-                    ? "text-alien-green shadow-alien-glow bg-alien-green/10"
-                    : "text-gray-900 hover:text-alien-green hover:shadow-alien-glow"
+                    ? "text-matcha-primary shadow-olive-forest bg-olive-forest"
+                    : "text-gray-900 hover:text-matcha-primary hover:shadow-olive-forest"
                 }`}
               >
                 <MessageSquare size={20} />
@@ -652,8 +652,8 @@ export default function ResponsiveNavbar({
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                   isActive("/pdf-chatbot")
-                    ? "text-alien-green shadow-alien-glow bg-alien-green/10"
-                    : "text-gray-900 hover:text-alien-green hover:shadow-alien-glow"
+                    ? "text-matcha-primary shadow-olive-forest bg-olive-forest"
+                    : "text-gray-900 hover:text-matcha-primary hover:shadow-olive-forest"
                 }`}
               >
                 <GitGraphIcon size={20} />
@@ -667,7 +667,7 @@ export default function ResponsiveNavbar({
             <div className="border-t border-smoke-light pt-2 mt-2">
               <div className="px-3 py-2">
                 <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-8 h-8 border border-neutral-700 rounded-full flex items-center justify-center shadow-alien-glow">
+                  <div className="w-8 h-8 border border-neutral-700 rounded-full flex items-center justify-center shadow-olive-forest">
                     <img
                       className="text-royal-black"
                       src={`https://robohash.org/${user?.username}.png`}
@@ -694,7 +694,7 @@ export default function ResponsiveNavbar({
               <Link
                 to="/change-username"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center space-x-2 px-3 py-2 text-gray-900 hover:text-alien-green transition-colors duration-300"
+                className="flex items-center space-x-2 px-3 py-2 text-gray-900 hover:text-matcha-primary transition-colors duration-300"
               >
                 <User size={20} />
                 <span>Change Username</span>
@@ -702,7 +702,7 @@ export default function ResponsiveNavbar({
               <Link
                 to="/forgot-password"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center space-x-2 px-3 py-2 text-gray-900 hover:text-alien-green transition-colors duration-300"
+                className="flex items-center space-x-2 px-3 py-2 text-gray-900 hover:text-matcha-primary transition-colors duration-300"
               >
                 <Lock size={20} />
                 <span>Change Password</span>
@@ -724,8 +724,8 @@ export default function ResponsiveNavbar({
               onClick={() => setIsMobileMenuOpen(false)}
               className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                 isActive("/auth")
-                  ? "text-alien-green shadow-alien-glow bg-alien-green/10"
-                  : "text-gray-900 hover:text-alien-green hover:shadow-alien-glow"
+                  ? "text-matcha-primary shadow-olive-forest bg-olive-forest"
+                  : "text-gray-900 hover:text-matcha-primary hover:shadow-olive-forest"
               }`}
             >
               <LogIn size={20} />

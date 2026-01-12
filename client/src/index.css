@@ -151,7 +151,7 @@
 
   .alien-button {
     background-color: var(--color-olive-primary);
-    color: var(--color-royal-black);
+    color: white;
     font-weight: 700;
     border-radius: 0.5rem;
     transition: all 0.3s;
