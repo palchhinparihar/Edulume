@@ -122,9 +122,9 @@ const LandingPage: React.FC = () => {
           </div>
 
           {/* Floating Elements */}
-          <div className="absolute top-20 left-4 sm:left-10 w-3 sm:w-4 h-3 sm:h-4 bg-alien-green rounded-full animate-pulse opacity-60"></div>
-          <div className="absolute top-40 right-4 sm:right-20 w-2 h-2 bg-alien-green rounded-full animate-pulse opacity-40"></div>
-          <div className="absolute bottom-20 left-4 sm:left-20 w-2 sm:w-3 h-2 sm:h-3 bg-alien-green rounded-full animate-pulse opacity-50"></div>
+          <div className="absolute top-20 left-4 sm:left-10 w-3 sm:w-4 h-3 sm:h-4 bg-olive-main rounded-full animate-pulse opacity-60"></div>
+          <div className="absolute top-40 right-4 sm:right-20 w-2 h-2 bg- rounded-full animate-pulse opacity-40"></div>
+          <div className="absolute bottom-20 left-4 sm:left-20 w-2 sm:w-3 h-2 sm:h-3 bg- rounded-full animate-pulse opacity-50"></div>
         </section>
 
         {/* Main Features Section */}

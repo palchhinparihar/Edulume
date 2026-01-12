@@ -106,7 +106,7 @@ const App: React.FC<AppProps> = () => {
   return (
     <Router>
       <SocketProvider>
-        <div className="min-h-screen bg-royal-black">
+        <div className="min-h-screen">
           <ScrollToTopOnRouteChange />
           <Navbar authenticated={isLoggedIn} onAuthChange={checkAuthStatus} />
           <Routes>
