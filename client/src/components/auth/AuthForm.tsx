@@ -115,7 +115,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                     type="text"
                     value={usernameOrEmail}
                     onChange={(e) => setUsernameOrEmail(e.target.value)}
-                    className="alien-input w-full pl-10"
+                    className="alien-input w-full pl-10 py-1 rounded-lg border border-matcha-primary"
                     placeholder="Enter username or email"
                     required
                   />
@@ -136,7 +136,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                       type="text"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
-                      className="alien-input w-full pl-10"
+                      className="alien-input w-full pl-10 py-1 rounded-lg border border-matcha-primary"
                       placeholder="Enter your username"
                       required
                     />
@@ -156,7 +156,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="alien-input w-full pl-10"
+                      className="alien-input w-full pl-10 py-1 rounded-lg border border-matcha-primary"
                       placeholder="Enter your email"
                       required
                     />
@@ -166,7 +166,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                       type="button"
                       onClick={handleSendOTP}
                       disabled={otpLoading || !email}
-                      className="mt-2 text-sm text-alien-green hover:text-alien-green-dark transition-colors duration-300 disabled:opacity-50"
+                      className="mt-2 text-sm text-blue-800 font-semibold transition-colors duration-300 disabled:opacity-50"
                     >
                       {otpLoading ? "Sending..." : "Send Verification Code"}
                     </button>
@@ -187,7 +187,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                         type="text"
                         value={otp}
                         onChange={(e) => setOtp(e.target.value)}
-                        className="alien-input w-full pl-10"
+                        className="alien-input w-full pl-10 py-1 rounded-lg border border-matcha-primary"
                         placeholder="Enter 6-digit code"
                         maxLength={6}
                         required
@@ -197,7 +197,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                       type="button"
                       onClick={handleSendOTP}
                       disabled={otpLoading}
-                      className="mt-2 text-sm text-moss-accent hover:text-alien-green transition-colors duration-300"
+                      className="mt-2 text-sm text-moss-accent hover:text-olive-forest transition-colors duration-300"
                     >
                       Resend Code
                     </button>
@@ -219,7 +219,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="alien-input w-full pl-10"
+                  className="alien-input w-full pl-10 py-1 rounded-lg border border-matcha-primary"
                   placeholder="Enter your password"
                   required
                 />
@@ -227,13 +227,13 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
             </div>
 
             {error && (
-              <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded-lg">
+              <div className="bg-red-800 border border-red-500 text-red-200 px-4 py-3 rounded-lg">
                 {error}
               </div>
             )}
 
             {success && (
-              <div className="bg-green-900/50 border border-green-500 text-green-200 px-4 py-3 rounded-lg">
+              <div className="bg-olive-forest border border-matcha-primary text-green-200 px-4 py-3 rounded-lg">
                 {success}
               </div>
             )}
@@ -290,7 +290,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
           <div className="mt-6 text-center">
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="text-matcha-primary hover:text-olive-primary  cursor-pointer hover:underline transition-colors duration-300"
+              className="text-matcha-primary hover:text-olive-primary font-semibold cursor-pointer hover:underline transition-colors duration-300"
             >
               {isLogin
                 ? "Don't have an account? Sign up"
