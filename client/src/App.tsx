@@ -44,6 +44,8 @@ import ScrollToTop from "./components/ui/ScrollToTop";
 import ScrollToTopOnRouteChange from "./components/ui/ScrollToTopOnRouteChange";
 import { isAuthenticated } from "./utils/auth";
 import { SocketProvider } from "./contexts/SocketContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface AppProps { }
 
@@ -94,10 +96,17 @@ const App: React.FC<AppProps> = () => {
     checkAuthStatus();
   }, [checkAuthStatus]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <Router>
       <SocketProvider>
-        <div className="min-h-screen bg-royal-black">
+        <div className="min-h-screen">
           <ScrollToTopOnRouteChange />
           <Navbar authenticated={isLoggedIn} onAuthChange={checkAuthStatus} />
           <Routes>

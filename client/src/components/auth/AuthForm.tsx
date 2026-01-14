@@ -87,9 +87,9 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
           <div className="text-center mb-8">
             <div className="w-16 h-16 bg-alien-green rounded-full flex items-center justify-center mx-auto mb-4 shadow-alien-glow">
               {isLogin ? (
-                <LogIn className="text-royal-black" size={32} />
+                <LogIn className="text-royal-black cursor-pointer" size={32} />
               ) : (
-                <UserPlus className="text-royal-black" size={32} />
+                <UserPlus className="text-royal-black cursor-pointer" size={32} />
               )}
             </div>
             <h2 className="text-3xl font-alien font-bold glow-text">
@@ -241,7 +241,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
             <button
               type="submit"
               disabled={loading}
-              className="alien-button w-full py-3 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="alien-button w-full py-3 text-lg disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
             >
               {loading ? "Processing..." : isLogin ? "Login" : "Sign Up"}
             </button>
@@ -262,7 +262,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
             <div className="mt-6">
               <a
                 href={`${import.meta.env.VITE_API_URL || "/api"}/auth/google`}
-                className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-smoke-light rounded-lg text-white hover:bg-smoke-light transition-colors"
+                className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-smoke-light rounded-lg text-white hover:bg-smoke-light hover:text-black transition-colors"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path
@@ -290,7 +290,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
           <div className="mt-6 text-center">
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="text-alien-green hover:text-alien-green-dark transition-colors duration-300"
+              className="text-alien-green hover:text-alien-green-light cursor-pointer transition-colors duration-300"
             >
               {isLogin
                 ? "Don't have an account? Sign up"
@@ -303,7 +303,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
               <button
                 type="button"
                 onClick={() => navigate("/forgot-password")}
-                className="text-sm text-gray-400 hover:text-alien-green transition-colors duration-300"
+                className="text-sm text-gray-400 hover:text-alien-green cursor-pointer transition-colors duration-300"
               >
                 Forgot your password?
               </button>
