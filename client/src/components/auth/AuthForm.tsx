@@ -166,7 +166,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                       type="button"
                       onClick={handleSendOTP}
                       disabled={otpLoading || !email}
-                      className="mt-2 text-sm text-blue-800 font-semibold transition-colors duration-300 disabled:opacity-50"
+                      className="mt-2 text-sm text-moss-accent hover:text-olive-forest font-semibold cursor-pointer transition-colors duration-300 hover:underline"
                     >
                       {otpLoading ? "Sending..." : "Send Verification Code"}
                     </button>
@@ -197,7 +197,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
                       type="button"
                       onClick={handleSendOTP}
                       disabled={otpLoading}
-                      className="mt-2 text-sm text-moss-accent hover:text-olive-forest transition-colors duration-300"
+                      className="mt-2 text-sm text-moss-accent hover:text-olive-forest font-semibold cursor-pointer transition-colors duration-300 hover:underline"
                     >
                       Resend Code
                     </button>

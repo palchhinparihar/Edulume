@@ -64,13 +64,13 @@ const CertificateVerificationPage: React.FC = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="bg-gray-800 rounded-lg p-8 max-w-md w-full mx-4">
+        <div className="rounded-lg p-8 max-w-md w-full mx-4">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto mb-4"></div>
-            <h2 className="text-xl font-semibold text-white mb-2">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-matcha-primary mx-auto mb-4"></div>
+            <h2 className="text-xl font-semibold text-olive-forest mb-2">
               Verifying Certificate
             </h2>
-            <p className="text-gray-400">
+            <p className="text-moss-accent">
               Please wait while we verify the certificate...
             </p>
           </div>

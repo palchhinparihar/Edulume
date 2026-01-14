@@ -499,12 +499,12 @@ export default function PdfChatbotPage() {
 
   if (!isAuth) {
     return (
-      <div className="min-h-screen bg-royal-black flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">
+          <h1 className="text-2xl font-bold text-olive-forest mb-4">
             Authentication Required
           </h1>
-          <p className="text-gray-400">Please log in to use the PDF Chatbot.</p>
+          <p className="text-moss-accent">Please log in to use the PDF Chatbot.</p>
         </div>
       </div>
     );
