@@ -262,7 +262,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthChange }) => {
             <div className="mt-6">
               <a
                 href={`${import.meta.env.VITE_API_URL || "/api"}/auth/google`}
-                className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-lg  text-black hover:text-olive-gold bg-matcha-muted hover:bg-olive-forest transition-colors"
+                className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-lg text-black hover:text-olive-gold bg-matcha-muted hover:bg-olive-forest transition-colors"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path
